@@ -1,9 +1,25 @@
 body{
     text-align: center;
     margin-top: 20%;
+    background-color: #eec9d2 ;
+}
+
+#quote{
+    margin-left: 250px;
+    margin-right: 250px;
+    border: 2px solid #f6abb6;
+    border-radius: 10px;
+    padding: 10px;
+    font-style: "old english";
+    background-color: #f4b6c2;
 }
 
 
 button{
 margin-left: 20px;
+background-color: #f4b6c2;
+padding: 5px;
+border-radius: 5px;
+border: #f6abb6;
+font-size: 20px;
 }
