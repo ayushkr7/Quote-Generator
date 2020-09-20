@@ -7,6 +7,7 @@ body{
 #quote{
     margin-left: 250px;
     margin-right: 250px;
+   font-family: "Lucida Console", Courier, monospace;
     border: 2px solid #f6abb6;
     border-radius: 10px;
     padding: 10px;
@@ -16,10 +17,31 @@ body{
 
 
 button{
-margin-left: 20px;
+margin-left: 40px;
 background-color: #f4b6c2;
 padding: 5px;
 border-radius: 5px;
+font-family: "Lucida Console", Courier, monospace;
 border: #f6abb6;
 font-size: 20px;
+position: relative;
+}
+
+
+
+@media(max-width:700px){
+
+  body{
+    margin-top: 40%;
+}
+  
+#quote{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+  
+button{
+ margin-top: 30px; 
+margin-left: 12px;
+  }
 }

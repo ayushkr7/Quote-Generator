@@ -1,5 +1,9 @@
 var rand_btn  = document.getElementById("rand-btn");
+var prev_btn  = document.getElementById("prev-btn");
+var next_btn  = document.getElementById("next-btn");
+
 const quote = document.getElementById("quote");
+var i=-1;
 
 rand_btn.addEventListener("click",function(){
    let text = quotes[getRandomNumber()];
@@ -7,12 +11,30 @@ rand_btn.addEventListener("click",function(){
 });
 
 function getRandomNumber(){
-  return Math.floor(Math.random()*(quotes.length-1));
+  i = Math.floor(Math.random()*(quotes.length-1));
+  return i;
 }
 
+prev_btn.addEventListener("click", function(){
+  if(i<=0){
+    let text ="No more quote here. GO NEXT.";
+    i=-1;
+   quote.textContent = text;
+  }else{
+   let text = quotes[i-1];
+   i=i-1;
+   quote.textContent=text;}
+});
 
-
-
+next_btn.addEventListener("click", function(){
+  if(i>=quotes.length-1){
+    let text ="No more quote here. GO PREV.";
+   quote.textContent = text;
+  }else{
+  let text = quotes[i+1];
+  i=i+1;
+  quote.textContent=text;}
+});
 
 
 var quotes = ["The tranquility that comes when you stop caring what they say. Or think, or do. Only what you do. -Marcus Aurelius",
